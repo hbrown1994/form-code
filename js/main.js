@@ -83,4 +83,3 @@ function draw() {
     drawOverLaps(xs[i], ys[i])
   }
 }
-s
