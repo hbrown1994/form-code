@@ -45,18 +45,19 @@ function make_line(start, end, y, yMod, noiseMod) {
   startPos += inc
 }
 
-  function drawOverLaps (x, y) {
-    stroke(random(100,255))
-    noFill()
-    for (var i = 0; i < total; i++) {
-      let distance = dist(x, y, xs[i], ys[i])
-      if (distance < d && distance !== 0 ) {
-        make_line(x, xs[i], y, yMod_main, noiseMod_main)
-      }
+function drawOverLaps (x, y) {
+  stroke(random(100,255))
+  noFill()
+  for (var i = 0; i < total; i++) {
+    let distance = dist(x, y, xs[i], ys[i])
+    if (distance < d && distance !== 0 ) {
+      make_line(x, xs[i], y, yMod_main, noiseMod_main)
     }
   }
+}
 
 function draw() {
+
   d_index += 0.001
   yMod_index += 0.1
   noiseMod_index += 0.125
